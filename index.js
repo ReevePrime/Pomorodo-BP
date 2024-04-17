@@ -55,7 +55,7 @@ function resetTimer() {
 
 
 function decrementTimer() {
-  if (currentTime > minTime) {
+  if (!intervalId && currentTime > minTime) {
     currentTime -= 60;
     startTime -=60;
     updateDisplay();
@@ -64,7 +64,7 @@ function decrementTimer() {
 
 
 function incrementTimer() {
-  if (currentTime < maxTime) {
+  if (!intervalId && currentTime < maxTime) {
     currentTime += 60;
     startTime += 60;
     updateDisplay();
