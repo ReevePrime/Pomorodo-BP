@@ -5,32 +5,13 @@ body {
   grid-template: auto;
   place-items: center;
   gap: 10px;
-  font-family: cursive, sans-serif;
-}
-
-h1 {
-  font-size: 4em;
 }
 
 .container {
-  position: relative;
   text-align: center;
   margin: 20px;
-  width: 120%;
 }
 
 .myTomato {
   height: 30vh;
-}
-
-.centered {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3em;
-}
-
-.unselectable {
-  user-select: none;
 }
