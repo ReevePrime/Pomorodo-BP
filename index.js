@@ -32,10 +32,35 @@ pauseButton.addEventListener("click", () => {
   resetButton.addEventListener("click", () => {
   clearInterval(intervalId);
   intervalId = null;
+<<<<<<< Updated upstream
   currentTime = 1500;
   timerMin.innerText = Math.floor(currentTime / 60).toString().padStart(2,'0');
   timerSec.innerText = Math.floor(currentTime % 60).toString().padStart(2,'0');
 });
+=======
+  currentTime = startTime;
+  updateDisplay();
+}
+
+
+function decrementTimer() {
+  if (!intervalId && currentTime > minTime) {
+    currentTime -= 60;
+    startTime -=60;
+    updateDisplay();
+  }
+}
+
+
+function incrementTimer() {
+  if (!intervalId && currentTime < maxTime) {
+    currentTime += 60;
+    startTime += 60;
+    updateDisplay();
+  }
+}
+
+>>>>>>> Stashed changes
 
 // Countdown timer
 function countingDown() {
