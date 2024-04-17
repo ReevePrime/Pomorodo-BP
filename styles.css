@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template: auto;
+  place-items: center;
+  gap: 10px;
+}
+
+.container {
+  text-align: center;
+  margin: 20px;
+}
+
+.myTomato {
+  height: 30vh;
+}
