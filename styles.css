@@ -1,22 +1,30 @@
 body {
+  background-color: rgba(252, 230, 232, 0.43);
   height: 100vh;
   margin: 0;
   display: grid;
   grid-template: auto;
   place-items: center;
   gap: 10px;
-  font-family: cursive, sans-serif;
+  font-family: "Showcard Gothic", sans-serif;
+}
+
+@font-face {
+  font-family: "Showcard Gothic";
+  src: url(fonts/SHOWG.TTF);
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .container {
+  background: radial-gradient(ellipse at center, rgba(255,179,206,0) 0%, rgba(255,180,199,0) 43%, rgba(255,181,189,0.43) 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: relative;
   text-align: center;
-  margin: 20px;
-  width: 120%;
+  padding: 10px;
+  border-radius: 30px;
 }
 
 .myTomato {
@@ -25,10 +33,22 @@ h1 {
 
 .centered {
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3em;
+}
+
+.timerButtons {
+  padding: 2em;
+}
+
+button {
+  margin: 1em;
+  padding: 1em;
+  border-radius: 10px;
+  font-family: "Showcard Gothic", sans-serif;
+  box-shadow: rgba(0, 0, 0) 0px 10px 15px;
 }
 
 .unselectable {

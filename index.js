@@ -33,24 +33,27 @@ plusButton.addEventListener("click", incrementTimer);
 //=============================================================================
 
 
-function startTimer() {
+function startTimer(e) {
   if (!intervalId) {
     intervalId = setInterval(countingDown, 1000);
+    buttonPress(e.target);
   }
 }
 
 
-function pauseTimer() {
+function pauseTimer(e) {
   clearInterval(intervalId);
   intervalId = null;
+  buttonPress(e.target);
 }
 
 
-function resetTimer() {
+function resetTimer(e) {
   clearInterval(intervalId);
   intervalId = null;
   currentTime = startTime;
   updateDisplay();
+  buttonPress(e.target);
 }
 
 
@@ -81,4 +84,16 @@ function countingDown() {
 function updateDisplay() {
   timerMin.innerText = Math.floor(currentTime / 60).toString().padStart(2, '0');
   timerSec.innerText = Math.floor(currentTime % 60).toString().padStart(2, '0');
+}
+
+
+function buttonPress(e) {
+  var buttons = document.querySelectorAll(".actionButton"); 
+  buttons.forEach(function(button) {
+    button.style.transform = "translateY(0)";
+    button.style.boxShadow = "rgba(0, 0, 0) 0px 10px 15px";
+  });
+
+  e.style.transform = "translateY(5px)";
+  e.style.boxShadow = "rgba(0, 0, 0) 0px 5px 15px";
 }
