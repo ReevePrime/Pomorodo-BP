@@ -25,18 +25,38 @@ h1 {
   text-align: center;
   padding: 10px;
   border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .myTomato {
   height: 30vh;
 }
 
+
 .centered {
   position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3em;
+  top: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+}
+
+
+@media screen and (max-width: 768px) {
+  .centered {
+    font-size: 7vw;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .centered {
+    font-size: 9vw; 
+  }
 }
 
 .timerButtons {

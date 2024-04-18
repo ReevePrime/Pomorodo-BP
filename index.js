@@ -9,12 +9,13 @@ const minusButton = document.getElementById("minus");
 const plusButton = document.getElementById("plus");
 const timerMin = document.getElementById("timerMin");
 const timerSec = document.getElementById("timerSec");
+
 const minTime = 1200; // 20 minutes in seconds
 const maxTime = 1800; // 30 minutes in seconds
 
-var intervalId;
-var startTime = 1500;
-var currentTime = parseInt(timerMin.innerText) * 60 + parseInt(timerSec.innerText);
+let intervalId;
+let startTime = 1500;
+let currentTime = parseInt(timerMin.innerText) * 60 + parseInt(timerSec.innerText);
 
 
 //=============================================================================
